@@ -1,0 +1,47 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/qweqwe?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+    enabled: true
+    cache: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: fsmgdb
+
+    solr:
+      host: http://127.0.0.1:8080/solr
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+
+
+
+
+
